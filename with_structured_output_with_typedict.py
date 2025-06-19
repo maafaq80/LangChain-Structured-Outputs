@@ -29,7 +29,7 @@ Stunning 200MP camera with incredible zoom capabilities
 Long battery life with fast charging
 S-Pen support is unique and useful
 
-
+Review by Muhammad aafaq 
 """)
 
 print(result)
