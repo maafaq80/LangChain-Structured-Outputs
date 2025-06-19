@@ -1,14 +1,14 @@
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from typing import TypedDict
+from typing import TypedDict,Annotated
 import os 
 
 load_dotenv()
 api_key=os.getenv("OPEN_AI_API_KEY")
 
 class Review(TypedDict):
-    summary:str
-    sentiment:str
+    summary:Annotated[str,"a brief summary of review"]
+    sentiment:Annotated[str,"return the sentiment of review either positive negative or neutrual"]
     
 model=ChatOpenAI(model="gpt-4o-mini",
                  openai_api_key=api_key)
