@@ -8,7 +8,7 @@ import os
 load_dotenv()
 api_key=os.getenv("OPEN_AI_API_KEY")
 
-class Review(TypedDict):
+class Review(BaseModel):
     key_themes:list[str]=Field(description="write down all the themes discussed in the review")
     summary:str= Field(default=None,description="a brief summary of review")
     sentiment:Literal['pos','neg']=Field(description="return the sentiment of review either positive or negative")
